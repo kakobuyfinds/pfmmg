@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#702d40">
+<title>OopBuy spreadsheet: categorias, tamanhos e guia de QC</title>
+<meta name="description" content="Explore o conceito de OopBuy spreadsheet em português: categorias de moda, comparação de medidas, leitura de fotos QC e preparação do orçamento de envio.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="OopBuy spreadsheet — um olhar atento antes de escolher">
+<meta property="og:description" content="Um guia independente de descoberta: categorias, medidas, fotografias e custos para comparar com mais clareza.">
+<meta property="og:image" content="https://static.nike.com/a/images/f_auto,q_auto,w_960,c_limit/19a82e7b-af02-4f48-8a8a-c084bc60472e/check-out-the-best-black-sneaker-styles-by-nike.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --paper:#f7f3eb;
+  --ink:#292723;
+  --wine:#702d40;
+  --line:#d9d2c6;
+  --muted:#615b54;
+  --white:#fffdfa;
+  --sage:#dce4d5
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+a{color:inherit;text-underline-offset:4px}
+a:focus-visible,summary:focus-visible{
+  outline:3px solid var(--wine);
+  outline-offset:5px
+}
+img{
+  display:block;
+  width:100%;
+  height:auto;
+  background:#ece8e1
+}
+.wrap{
+  width:min(1180px,calc(100% - 40px));
+  margin:auto
+}
+header{border-bottom:1px solid var(--line)}
+.mast{
+  min-height:88px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center
+}
+.brand{
+  text-decoration:none;
+  font-size:23px;
+  font-weight:850;
+  letter-spacing:-1px
+}
+.brand span{color:var(--wine)}
+.stamp,.eyebrow{
+  font-size:12px;
+  font-weight:750;
+  letter-spacing:.13em;
+  text-transform:uppercase
+}
+.stamp{color:var(--muted)}
+.catalog{padding:27px 0 32px}
+.catalog-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:15px
+}
+.catalog h2{font-size:18px;margin:0}
+.catalog-head p{
+  font-size:13px;
+  margin:0;
+  color:var(--muted)
+}
+.categories{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line)
+}
+.categories a{
+  padding:14px 12px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:13px;
+  font-weight:650;
+  min-height:65px
+}
+.categories a:hover{background:var(--wine);color:white}
+.categories small{font-weight:400;opacity:.65}
+.hero{
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  gap:48px;
+  align-items:center;
+  padding:26px 0 55px
+}
+.eyebrow{color:var(--wine);margin:0 0 18px}
+h1,h2,h3{line-height:1.14;text-wrap:balance}
+h1{
+  font:normal clamp(43px,5.6vw,75px)/1.03 Georgia,serif;
+  letter-spacing:-2px;
+  margin:0 0 24px
+}
+h1 em{color:var(--wine);font-weight:normal}
+.intro{
+  font-size:18px;
+  color:var(--muted);
+  max-width:53ch
+}
+.button{
+  display:inline-flex;
+  align-items:center;
+  gap:28px;
+  background:var(--wine);
+  color:#fff;
+  padding:14px 22px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  border-radius:2px
+}
+.note{font-size:12px;color:var(--muted);margin-top:16px}
+.hero figure{margin:0;position:relative}
+.hero img{aspect-ratio:1/1;object-fit:cover}
+.hero figcaption{
+  font-size:12px;
+  padding:10px 0;
+  color:var(--muted)
+}
+.answer{
+  background:var(--sage);
+  padding:30px 35px;
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:30px
+}
+.answer h2{
+  font:normal 29px/1.2 Georgia,serif;
+  margin:0
+}
+.answer p{margin:0}
+.section{
+  padding:64px 0;
+  border-bottom:1px solid var(--line)
+}
+.section-title{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:end;
+  margin-bottom:28px
+}
+.section-title h2{
+  font:normal clamp(30px,4vw,46px)/1.1 Georgia,serif;
+  margin:0
+}
+.section-title p{color:var(--muted);margin:0}
+.editorial{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px
+}
+.editorial figure{margin:0}
+.editorial img{
+  aspect-ratio:4/5;
+  object-fit:contain;
+  background:#eeebe5
+}
+.editorial figcaption{
+  font-size:12px;
+  color:var(--muted);
+  padding-top:10px
+}
+.editorial h3{font-size:19px;margin:17px 0 10px}
+.editorial p{font-size:14px;color:var(--muted)}
+.journal{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px
+}
+.journal article{
+  border-top:3px solid var(--wine);
+  padding-top:22px
+}
+.journal h3{
+  font:normal 27px/1.2 Georgia,serif;
+  margin:10px 0 18px
+}
+.journal h4{font-size:16px;margin:23px 0 6px}
+.journal p{
+  font-size:15px;
+  margin:0;
+  color:var(--muted)
+}
+.table-wrap{overflow-x:auto}
+table{
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+  font-size:14px
+}
+th,td{
+  padding:17px 15px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top
+}
+th{background:#eee7dc}
+td:first-child{font-weight:700;min-width:130px}
+.faq{
+  display:grid;
+  grid-template-columns:.85fr 1.5fr;
+  gap:60px
+}
+.faq h2{
+  font:normal 40px/1.1 Georgia,serif;
+  margin:0 0 20px
+}
+.faq p{color:var(--muted)}
+details{
+  border-bottom:1px solid var(--line);
+  padding:18px 0
+}
+summary{font-weight:700;cursor:pointer;padding-right:10px}
+details p{font-size:15px;margin-bottom:5px}
+.closing{
+  margin:48px 0;
+  background:var(--wine);
+  color:white;
+  padding:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px
+}
+.closing h2{
+  font:normal 32px/1.15 Georgia,serif;
+  margin:0 0 10px
+}
+.closing p{margin:0;max-width:60ch}
+.closing .button{
+  background:var(--paper);
+  color:var(--wine);
+  flex-shrink:0
+}
+footer{padding:0 0 34px;font-size:12px;color:var(--muted)}
+footer p{max-width:100ch}
+.sources{font-size:12px;color:var(--muted)}
+@media(max-width:900px){
+  .categories{grid-template-columns:repeat(3,1fr)}
+  .hero{gap:25px}
+  .editorial{gap:16px}
+  .faq{gap:30px}
+}
+@media(max-width:620px){
+  .wrap{width:calc(100% - 28px)}
+  .mast{min-height:72px}
+  .stamp{font-size:10px;max-width:125px;text-align:right}
+  .categories{grid-template-columns:repeat(2,1fr)}
+  .catalog-head{display:block}
+  .catalog-head p{margin-top:6px}
+  .hero,.answer,.section-title,.journal,.faq{grid-template-columns:1fr}
+  .hero{padding-top:12px;gap:25px}
+  h1{font-size:48px}
+  .hero figure{max-width:100%}
+  .hero img{aspect-ratio:4/3}
+  .answer{padding:25px;gap:16px}
+  .section{padding:42px 0}
+  .editorial{grid-template-columns:1fr}
+  .editorial figure{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    column-gap:18px;
+    align-items:start
+  }
+  .editorial img{grid-row:1/4;aspect-ratio:1/1}
+  .editorial figcaption{padding:0}
+  .editorial h3{margin:5px 0}
+  .editorial p{margin:4px 0}
+  .closing{padding:26px;display:block}
+  .closing .button{margin-top:23px}
+  .journal{gap:32px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "name":"OopBuy spreadsheet: categorias, tamanhos e guia de QC",
+      "inLanguage":"pt",
+      "description":"Guia independente em português para descobrir categorias, comparar medidas e analisar fotografias de produtos.",
+      "about":{
+        "@type":"Thing",
+        "name":"OopBuy spreadsheet"
+      }
+    },
+    {
+      "@type":"Article",
+      "headline":"Tamanhos OopBuy: comparar medidas antes da etiqueta",
+      "inLanguage":"pt",
+      "articleBody":"Compare as medidas da peça com uma que já usa. No calçado, verifique o comprimento do pé e a tabela específica do modelo. Em roupa, compare peito, ombros e comprimento. Peça esclarecimentos quando faltar a unidade ou o método de medição."
+    },
+    {
+      "@type":"Article",
+      "headline":"OopBuy QC: ler fotografias com atenção",
+      "inLanguage":"pt",
+      "articleBody":"Observe vistas gerais e detalhes da mesma variante. Compare simetria, costuras, fechos e medidas visíveis. A iluminação pode alterar a cor. Fotografias não comprovam autenticidade, composição ou durabilidade."
+    },
+    {
+      "@type":"FAQPage",
+      "inLanguage":"pt",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"O que é uma OopBuy spreadsheet?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"É uma lista organizada de referências e ligações de produtos, normalmente dividida por categoria. Ajuda na descoberta, mas cada anúncio precisa de confirmação individual."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Como usar uma OopBuy spreadsheet em português?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Escolha uma categoria, abra uma referência, compare as medidas e as fotografias disponíveis e confirme as condições no destino. Neste guia, as ligações de navegação levam ao catálogo Cafans."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"As fotos QC provam a autenticidade?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Não. As fotos QC ajudam a observar características visíveis de uma unidade, mas não certificam autenticidade, composição ou durabilidade."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Como calcular o custo total de uma compra?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Considere produto, transporte interno, serviços, envio internacional, conversão cambial e eventuais impostos. Confirme a estimativa atual para o destino antes de pagar."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Este site é oficial da OopBuy ou das marcas?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Não. É um guia editorial independente, sem afiliação oficial declarada com OopBuy, Nike, Gucci, Louis Vuitton, Hermès ou Dior. As imagens são referências visuais, não ofertas verificadas."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"O que fazer quando uma ligação deixa de funcionar?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Volte à categoria correspondente e procure uma referência atual. Confirme novamente o modelo e a variante; uma ligação substituída pode apontar para outro artigo."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/pfmmg/">
+</head>
+<body>
+<header>
+  <div class="wrap mast">
+    <a class="brand" href="https://www.cafans.com">OopBuy<span> / caderno</span></a>
+    <span class="stamp">Moda · pesquisa · escolhas informadas</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="catalog" aria-label="Categorias no catálogo Cafans">
+    <div class="catalog-head">
+      <h2>Comece por uma categoria</h2>
+      <p>Acesso direto ao catálogo Cafans ↗</p>
+    </div>
+    <div class="categories">
+      <a href="https://cafans.com/category-911-Shoes.html"><small>01</small> Calçado</a>
+      <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html"><small>02</small> Sweatshirts e camisolas</a>
+      <a href="https://cafans.com/category-913-T-Shirts.html"><small>03</small> T-shirts</a>
+      <a href="https://cafans.com/category-914-Jackets.html"><small>04</small> Casacos</a>
+      <a href="https://cafans.com/category-915-Pants%2FShorts.html"><small>05</small> Calças e calções</a>
+      <a href="https://cafans.com/category-916-Headwear.html"><small>06</small> Bonés e chapéus</a>
+      <a href="https://cafans.com/category-917-Sets.html"><small>07</small> Conjuntos</a>
+      <a href="https://cafans.com/category-918-underwear%2Funderpants.html"><small>08</small> Roupa interior</a>
+      <a href="https://cafans.com/category-919-Jersey.html"><small>09</small> Camisolas desportivas</a>
+      <a href="https://cafans.com/category-920-Accessories.html"><small>10</small> Acessórios</a>
+    </div>
+  </nav>
+
+  <section class="hero" aria-labelledby="titulo">
+    <div>
+      <p class="eyebrow">Guia independente em português</p>
+      <h1 id="titulo">OopBuy spreadsheet.<br><em>Escolher começa por observar.</em></h1>
+      <p class="intro">Entre uma fotografia apelativa e uma boa escolha, há detalhes a confirmar. Organize a pesquisa por categoria, compare medidas e aprenda a ler as imagens com atenção.</p>
+      <a class="button" href="https://www.cafans.com">Explorar o catálogo Cafans <span aria-hidden="true">↗</span></a>
+      <p class="note">Conteúdo editorial. A navegação de produtos abre a Cafans; esta página não processa encomendas.</p>
+    </div>
+    <figure>
+      <img
+        src="https://static.nike.com/a/images/f_auto,q_auto,w_960,c_limit/19a82e7b-af02-4f48-8a8a-c084bc60472e/check-out-the-best-black-sneaker-styles-by-nike.jpg"
+        width="960"
+        height="960"
+        alt="Fotografia editorial de sapatilhas Nike pretas"
+        fetchpriority="high"
+        decoding="async">
+      <figcaption>Referência visual Nike · Observe a silhueta, depois confirme o modelo.</figcaption>
+    </figure>
+  </section>
+
+  <section class="answer" aria-labelledby="definicao">
+    <h2 id="definicao">O que é uma OopBuy spreadsheet?</h2>
+    <p>É uma lista organizada de referências e ligações de produtos, normalmente dividida por categoria. Ajuda a descobrir artigos e a comparar opções; <strong>não confirma, por si só, stock, qualidade ou autenticidade.</strong> Este caderno explica o método de pesquisa e encaminha para as categorias da Cafans.</p>
+  </section>
+
+  <section class="section" aria-labelledby="olhar">
+    <div class="section-title">
+      <div>
+        <p class="eyebrow">OopBuy finds · referências de estilo</p>
+        <h2 id="olhar">Três imagens.<br>Três formas de observar.</h2>
+      </div>
+      <p>Use marcas como referência visual, sem confundir uma imagem de campanha com a unidade de um anúncio. As fotografias abaixo não representam disponibilidade confirmada no catálogo.</p>
+    </div>
+
+    <div class="editorial">
+      <figure>
+        <img
+          src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1526920203/446744_DTDIT_1000_001_055_0000_Light-GG-Marmont-matelass-mini-bag.jpg"
+          width="800"
+          height="800"
+          loading="lazy"
+          decoding="async"
+          alt="Mala Gucci GG Marmont em pele acolchoada com corrente">
+        <figcaption>Gucci · textura e ferragens</figcaption>
+        <h3>Acessórios: olhe de perto</h3>
+        <p>Compare o alinhamento das costuras, os fechos e as dimensões. Uma fotografia geral pode esconder pequenos detalhes.</p>
+      </figure>
+
+      <figure>
+        <img
+          src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1496854820/475361_X9E56_4484_002_100_0000_Light-.jpg"
+          width="800"
+          height="800"
+          loading="lazy"
+          decoding="async"
+          alt="Peça de vestuário desportivo Gucci em fotografia de produto">
+        <figcaption>Gucci · vestuário desportivo</figcaption>
+        <h3>Roupa: proporções primeiro</h3>
+        <p>O corte deve ser avaliado pelas medidas da peça. A letra na etiqueta não substitui peito, ombros e comprimento.</p>
+      </figure>
+
+      <figure>
+        <img
+          src="https://assets.christiandior.com/is/image/diorprod/M0565ONGEM900_E01-1?wid=640&amp;hei=800"
+          width="640"
+          height="800"
+          loading="lazy"
+          decoding="async"
+          alt="Mala Lady Dior preta vista de frente">
+        <figcaption>Dior · estrutura e acabamento</figcaption>
+        <h3>Forma: compare os ângulos</h3>
+        <p>Procure vistas de frente, de lado e da base. Imagens com luz diferente podem alterar a perceção da cor.</p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="caderno">
+    <div class="section-title">
+      <div>
+        <p class="eyebrow">Guia OopBuy · artigos de consulta</p>
+        <h2 id="caderno">Antes de decidir,<br>faça quatro verificações.</h2>
+      </div>
+      <p>Um método simples para transformar uma lista de referências numa comparação útil. Comece pelas informações que faltam.</p>
+    </div>
+
+    <div class="journal">
+      <article>
+        <span class="eyebrow">01 / Descoberta</span>
+        <h3>Como usar uma OopBuy spreadsheet sem perder o contexto</h3>
+
+        <h4>Como encontrar calçado por categoria?</h4>
+        <p>Abra primeiro o tipo de produto pretendido. Compare referências semelhantes em vez de juntar modelos com finalidades diferentes.</p>
+
+        <h4>Como comparar OopBuy finds?</h4>
+        <p>Registe modelo, variante, medidas e ligação de origem. Separe os dados fornecidos pelo anúncio das suas próprias observações.</p>
+
+        <h4>Como verificar ligações de produtos?</h4>
+        <p>Confirme que o destino ainda mostra o mesmo artigo e a mesma variante. Uma fotografia antiga não prova disponibilidade atual.</p>
+
+        <h4>Como organizar uma seleção de roupa?</h4>
+        <p>Agrupe por utilização e estação. Uma seleção curta com informação completa é mais fácil de avaliar do que uma lista extensa sem medidas.</p>
+      </article>
+
+      <article>
+        <span class="eyebrow">02 / Medidas</span>
+        <h3>Tamanhos OopBuy: comparar medidas antes da etiqueta</h3>
+
+        <h4>Como escolher o tamanho das sapatilhas?</h4>
+        <p>Meça o comprimento do pé e consulte a tabela específica do modelo. Verifique se a medida indicada corresponde ao pé, à palmilha ou à sola.</p>
+
+        <h4>Como medir uma sweatshirt?</h4>
+        <p>Coloque uma peça que já usa numa superfície plana. Compare peito, ombros, mangas e comprimento, respeitando o método da tabela.</p>
+
+        <h4>Como comparar calças e calções?</h4>
+        <p>Observe cintura, anca, entrepernas e comprimento total. Confirme se a cintura foi medida em repouso ou esticada.</p>
+
+        <h4>Como escolher conjuntos desportivos?</h4>
+        <p>Compare a parte superior e a inferior separadamente. Se faltar a unidade ou o método de medição, peça esclarecimentos.</p>
+      </article>
+
+      <article>
+        <span class="eyebrow">03 / Fotografias</span>
+        <h3>OopBuy QC: ler fotografias com atenção</h3>
+
+        <h4>O que observar nas fotos QC de sapatilhas?</h4>
+        <p>Procure vistas gerais e detalhes da mesma variante. Observe simetria, costuras e união da sola, sem concluir autenticidade pelas imagens.</p>
+
+        <h4>Como analisar costuras e estampados?</h4>
+        <p>Compare os dois lados da peça e procure zonas desfocadas. Peça imagens adicionais quando um detalhe relevante não estiver visível.</p>
+
+        <h4>Como verificar acessórios nas fotografias?</h4>
+        <p>Observe fechos, ferragens e pontos de união. Se o tamanho importar, procure uma régua na imagem ou medidas confirmadas.</p>
+
+        <h4>As fotografias mostram a cor real?</h4>
+        <p>A iluminação e o ecrã podem alterar a cor. As imagens também não comprovam composição, durabilidade ou autenticidade.</p>
+      </article>
+
+      <article>
+        <span class="eyebrow">04 / Orçamento</span>
+        <h3>Envio OopBuy: pensar no custo completo</h3>
+
+        <h4>Como estimar o envio internacional?</h4>
+        <p>Reúna destino, peso e dimensões previstos. Consulte a cotação disponível no serviço escolhido; não existe um valor único para todas as encomendas.</p>
+
+        <h4>Como comparar custos para Portugal?</h4>
+        <p>Verifique o que a cotação inclui e se existem encargos adicionais. Consulte as condições atuais do transportador e a informação aduaneira aplicável.</p>
+
+        <h4>O peso volumétrico pode alterar o orçamento?</h4>
+        <p>O espaço ocupado pode influenciar a cobrança, conforme a rota. Confirme a regra usada e as dimensões finais da embalagem.</p>
+
+        <h4>O que confirmar antes de pagar?</h4>
+        <p>Some produto, transporte interno, serviços, envio internacional, conversão cambial e eventuais impostos. Leia também as condições de devolução.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="comparacao">
+    <div class="section-title">
+      <div>
+        <p class="eyebrow">Da pesquisa à escolha</p>
+        <h2 id="comparacao">Quatro dúvidas frequentes,<br>uma próxima ação clara.</h2>
+      </div>
+      <p>Se a informação essencial faltar, adie a decisão e complete a comparação.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption>Verificações práticas antes de escolher uma referência</caption>
+        <thead>
+          <tr>
+            <th scope="col">Pesquisa</th>
+            <th scope="col">O que verificar</th>
+            <th scope="col">Próxima ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Como escolher bonés e chapéus?</td>
+            <td>Perímetro, profundidade e ajuste.</td>
+            <td>Compare com um modelo que já usa.</td>
+          </tr>
+          <tr>
+            <td>Como comparar roupa interior?</td>
+            <td>Medidas, composição declarada e restrições de devolução.</td>
+            <td>Confirme as condições específicas antes de encomendar.</td>
+          </tr>
+          <tr>
+            <td>Como escolher camisolas desportivas?</td>
+            <td>Corte, largura do peito e comprimento.</td>
+            <td>Compare a tabela da variante selecionada.</td>
+          </tr>
+          <tr>
+            <td>Como avaliar referências de marcas?</td>
+            <td>Origem do anúncio e provas disponíveis.</td>
+            <td>Não deduza autenticidade pela presença de um logótipo.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section faq" aria-labelledby="perguntas">
+    <div>
+      <p class="eyebrow">Respostas diretas</p>
+      <h2 id="perguntas">Perguntas antes do próximo clique.</h2>
+      <p>Informação breve para quem começa a pesquisar uma OopBuy spreadsheet em português.</p>
+    </div>
+
+    <div>
+      <details open>
+        <summary>O que é uma OopBuy spreadsheet?</summary>
+        <p>É uma lista organizada de referências e ligações de produtos, normalmente dividida por categoria. Ajuda na descoberta, mas cada anúncio precisa de confirmação individual.</p>
+      </details>
+
+      <details>
+        <summary>Como usar uma OopBuy spreadsheet em português?</summary>
+        <p>Escolha uma categoria, abra uma referência, compare as medidas e as fotografias disponíveis e confirme as condições no destino. Neste guia, as ligações de navegação levam ao catálogo Cafans.</p>
+      </details>
+
+      <details>
+        <summary>As fotos QC provam a autenticidade?</summary>
+        <p>Não. As fotos QC ajudam a observar características visíveis de uma unidade, mas não certificam autenticidade, composição ou durabilidade.</p>
+      </details>
+
+      <details>
+        <summary>Como calcular o custo total de uma compra?</summary>
+        <p>Considere produto, transporte interno, serviços, envio internacional, conversão cambial e eventuais impostos. Confirme a estimativa atual para o destino antes de pagar.</p>
+      </details>
+
+      <details>
+        <summary>Este site é oficial da OopBuy ou das marcas?</summary>
+        <p>Não. É um guia editorial independente, sem afiliação oficial declarada com OopBuy, Nike, Gucci, Louis Vuitton, Hermès ou Dior. As imagens são referências visuais, não ofertas verificadas.</p>
+      </details>
+
+      <details>
+        <summary>O que fazer quando uma ligação deixa de funcionar?</summary>
+        <p>Volte à categoria correspondente e procure uma referência atual. Confirme novamente o modelo e a variante; uma ligação substituída pode apontar para outro artigo.</p>
+      </details>
+    </div>
+  </section>
+
+  <aside class="closing">
+    <div>
+      <h2>Uma categoria. Uma comparação de cada vez.</h2>
+      <p>Explore a Cafans e leve consigo este método: confirmar a referência, comparar as medidas e esclarecer o que falta.</p>
+    </div>
+    <a class="button" href="https://www.cafans.com">Visitar a Cafans <span aria-hidden="true">↗</span></a>
+  </aside>
+</main>
+
+<footer class="wrap">
+  <p><strong>OopBuy / caderno.</strong> Guia editorial independente em português. As marcas pertencem aos respetivos titulares. Não são apresentados preços, avaliações, descontos ou garantias de autenticidade.</p>
+  <p>As imagens externas são referências de estilo; podem não corresponder a artigos do catálogo de destino. As condições de compra devem ser confirmadas diretamente no anúncio e no serviço escolhido.</p>
+  <p class="sources">Temas de pesquisa: organização de categorias, comparação de medidas, fotografias QC e composição do custo de envio. Texto original de orientação geral.</p>
+  <a href="https://www.cafans.com">Continuar na Cafans ↗</a>
+</footer>
+</body>
+</html>
